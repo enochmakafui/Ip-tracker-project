@@ -22,23 +22,23 @@ const Details = (props) => {
 
 
   return (
-    <div className="grid grid-cols-4 divide-x z-20 bg-white absolute top-40 mx-20 h-28 w-10/12 rounded-lg">
-    <div className="pl-5 py-2" >
-       <h1  className="text-gray-500 text-xs font-medium uppercase">ip address</h1>
-       <h1 className="pt-4  font-bold text-2xl">{data.length===0?" ":data.ip}</h1>
+    <div className="flex flex-col mx-6 w-5/6 h-70 sm:grid sm:grid-cols-4 sm:divide-x z-20 bg-white absolute top-40 sm:mx-20 sm:h-28 sm:w-10/12 rounded-lg">
+    <div className="pl-5 py-1 sm:py-2" >
+       <h1  className="text-center sm:text-left text-gray-500 text-xs font-medium uppercase">ip address</h1>
+       <h1 className="pt-4  text-center sm:text-left  font-bold text-xl sm:text-2xl">{data.length===0?" ":data.ip}</h1>
     </div>
-    <div className="pl-5 py-2">
-        <h1 className="text-gray-500 text-xs font-medium uppercase">location</h1>
-        <h1 className="pt-4  font-bold text-2xl">{data.length===0?" ":`${data.location.country},${data.location.city}`}</h1>
+    <div className="pl-5 py-1 sm:py-2">
+        <h1 className="text-center sm:text-left text-gray-500 text-xs font-medium uppercase">location</h1>
+        <h1 className="pt-4  text-center sm:text-left font-bold text-xl sm:text-2xl">{data.length===0?" ":`${data.location.country},${data.location.city}`}</h1>
         
     </div>
-    <div className="pl-5 py-2">
-        <h1 className="text-gray-500 text-xs font-medium uppercase">TimeZone</h1> 
-        <h1 className="pt-4  font-bold text-2xl">{data.length===0?" ": `UTC ${data.location.timezone}`}</h1>
+    <div className="pl-5 py-1 sm:py-2">
+        <h1 className="text-center sm:text-left text-gray-500 text-xs font-medium uppercase">TimeZone</h1> 
+        <h1 className="pt-4  text-center sm:text-left font-bold text-xl sm:text-2xl">{data.length===0?" ": `UTC ${data.location.timezone}`}</h1>
     </div>
-    <div className="pl-2 py-2">
-        <h1 className="text-gray-500 text-xs font-medium uppercase">Isp</h1>
-        <h1 className="pt-2  font-bold text-xl">{data.length===0?" " :data.isp}</h1>
+    <div className="pl-2 py-1 sm:py-2 ">
+        <h1 className="text-center sm:text-left text-gray-500 text-xs font-medium uppercase">Isp</h1>
+        <h1 className="pt-2 text-center sm:text-left font-bold text-xl">{data.length===0?" " :data.isp}</h1>
     </div>
 
     </div>

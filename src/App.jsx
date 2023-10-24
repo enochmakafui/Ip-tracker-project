@@ -42,7 +42,7 @@ const App = () => {
         center={position}
         zoom={13}
         scrollWheelZoom={false}
-        className=' z-0'
+        className='min-h-screen z-0'
         whenCreated={map => (mapRef.current = map)} // Set the mapRef
       >
         <TileLayer
