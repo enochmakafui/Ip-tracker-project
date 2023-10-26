@@ -1,8 +1,17 @@
 import React, { useState, useRef,useEffect   } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useMap } from 'react-leaflet/hooks'
+import iconMarker from 'leaflet/dist/images/marker-icon.png'
+import iconRetina from 'leaflet/dist/images/marker-icon-2x.png'
+import iconShadow from 'leaflet/dist/images/marker-shadow.png'
 import Header from './header';
 import Details from './details';
+
+const icon = L.icon({ 
+    iconRetinaUrl:iconRetina, 
+    iconUrl: iconMarker, 
+    shadowUrl: iconShadow 
+});
 
 const RecenterAutomatically = ({lat,lng}) => {
   const map = useMap();
@@ -16,7 +25,7 @@ const App = () => {
   const [IpAddress, setIpAddress] = useState("");
   const [done, setDone] = useState(false);
   const mapRef = useRef(null); // Create a ref for the map
-
+  
   function handleApi(Ip) {
     setIpAddress(Ip);
     setDone(!done);
@@ -49,7 +58,7 @@ const App = () => {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position}>
+        <Marker position={position} icon={icon}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
