@@ -21,5 +21,5 @@ and IP Geolocation to work with finding locations on maps
 # To update 
 - git clone 
 - npm i 
-- npm start
+- npm run dev
 
